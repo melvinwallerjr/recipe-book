@@ -1,0 +1,263 @@
+/* >> css reset */
+*, ::before, ::after {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6, p, div, dl, ul, ol,
+header, nav, aside, main, section, article,
+menu, details, blockquote, summary, footer,
+hr, figure > a, figcaption {
+	display: block;
+}
+legend, figure {
+	display: inline-block;
+}
+address, cite {
+	display: inline;
+}
+html, body {
+	margin: 0;
+	padding: 0;
+}
+html {
+	height: 100%;
+	background-color: #000;
+}
+body {
+	min-height: 100%;
+	background-color: #fff;
+	font-size: 1rem;
+	text-rendering: optimizeLegibility;
+}
+code, pre, kbd, samp {
+	font-family: 'Courier New', 'Courier', monospace;
+	font-size: 1rem;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 .25em;
+	font-weight: bold;
+}
+h1 {
+	font-size: 1.6rem;
+}
+h2, section h1 {
+	font-size: 1.5rem;
+}
+h3, section h2, article h1 {
+	font-size: 1.4rem;
+}
+h4, section h3, article h2 {
+	font-size: 1.3rem;
+}
+h5, section h4, article h3 {
+	font-size: 1.2rem;
+}
+h6, section h5, article h4 {
+	font-size: 1.1rem;
+}
+section h6, article h5 {
+	font-size: 1rem;
+}
+article h6 {
+	font-size: .9rem;
+}
+a, a:focus, a:active, a:hover {
+	text-decoration: none;
+	outline: 0;
+	cursor: default;
+}
+a[href]:link {
+	color: #069;
+}
+a[href]:visited {
+	color: #08d;
+}
+a[href]:active {
+	color: #09f;
+}
+a[href]:focus, a[href]:hover {
+	color: #0bf;
+}
+a[href]:link, a[href]:visited {
+	text-decoration: underline;
+}
+a[href]:focus, a[href]:active, a[href]:hover {
+	text-decoration: underline;
+}
+a[href]:hover,
+a[href]:hover *,
+a[href]:hover::before,
+a[href]:hover::after {
+	cursor: pointer;
+}
+hr {
+	margin: 1em 0;
+	border: 0;
+	border-top: 1px solid #ccc;
+	height: 1px;
+}
+p {
+	margin: 0 0 .75em;
+}
+blockquote {
+	margin: 0 15%;
+}
+blockquote::before, q::before {
+	content: open-quote;
+}
+blockquote::after, q::after {
+	content: close-quote;
+}
+address, cite {
+	font-style: italic;
+}
+abbr {
+	border: 0 none;
+	outline: 0 none;
+	font-style: normal;
+}
+abbr[title] {
+	border-bottom: 1px dotted;
+	cursor: help;
+}
+ins {
+	background-color: #ff9;
+	text-decoration: none;
+	color: #000;
+}
+del {
+	background-color: #ddd;
+	text-decoration: line-through;
+}
+strong, b {
+	font-weight: bold;
+}
+em, i {
+	font-weight: normal;
+	font-style: italic;
+}
+small {
+	font-size: .85em;
+}
+sup, sub {
+	position: relative;
+	line-height: 0;
+	font-size: .75em;
+}
+sup {
+	vertical-align: text-top;
+}
+sub {
+	vertical-align: text-bottom;
+}
+img {
+	border: 0 none;
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+	-ms-interpolation-mode: bicubic;
+}
+figure {
+	position: relative;
+	z-index: 0;
+	vertical-align: middle;
+	max-width: 100%;
+}
+figcaption cite {
+	font-size: .75em;
+}
+pre {
+	word-wrap: break-word;
+}
+mark {
+	background: #ff0;
+	color: #000;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+caption, th, td {
+	padding: .25em .5em;
+	vertical-align: top;
+	text-align: left;
+}
+th {
+	font-weight: bold;
+}
+thead th, thead td {
+	padding: .25em;
+	vertical-align: bottom;
+	text-align: center;
+}
+dl, ul, ol {
+	list-style: outside none;
+	margin: 0 0 .5em;
+}
+dt {
+	margin: 0 0 .25em;
+}
+dd {
+	margin: 0 0 .2em 2em;
+}
+li {
+	margin: 0 0 .1em 2em;
+	list-style: outside none;
+}
+ul li {
+	list-style-type: square;
+}
+li ul li {
+	list-style-type: disc;
+}
+li li ul li {
+	list-style-type: circle;
+}
+ol li {
+	list-style-type: upper-alpha;
+}
+li ol li {
+	list-style-type: decimal;
+}
+li li ol li {
+	list-style-type: lower-alpha;
+}
+li > h1, li > h2, li > h3,
+li > h4, li > h5, li > h6 {
+	margin-top: 0;
+}
+fieldset {
+	border: 2px inset #ccc;
+}
+legend {
+	margin: 0 1.5em .25em;
+	padding: 0 .5em;
+	vertical-align: top;
+	text-align: left;
+}
+label {
+	vertical-align: middle;
+}
+input, button, select, textarea {
+	margin: 0;
+	line-height: 1.1em;
+	vertical-align: middle;
+	text-transform: none;
+	font-size: 1rem;
+}
+svg {
+	max-width: 100%;
+	max-height: 100%;
+	fill: currentColor;
+}
+body > iframe {
+	position: absolute !important;
+	left: -110% !important;
+	top: 0 !important;
+}
+[hidden] {
+	display: none !important;
+}
+/* << css reset */

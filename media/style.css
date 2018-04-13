@@ -1,0 +1,277 @@
+body {
+	background-color: #333;
+	font-size: 14px;
+	color: #222;
+}
+
+body, input, button, select, textarea {
+	font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+code, pre, kbd, samp {
+	font-family: 'Consolas', 'Lucida Console', 'Monaco', 'Courier New', 'Courier', monospace;
+}
+
+header,
+footer {
+	padding: 1em;
+	background-color: #333;
+	color: #fefefe;
+}
+
+main {
+	padding: 1em;
+	background-color: #fff;
+}
+
+label {
+	display: inline-block;
+	border: 1px solid transparent;
+	padding: 0 .5em;
+	white-space: nowrap;
+	line-height: 2em;
+}
+
+input:not([type="radio"]):not([type="checkbox"]):not([type="range"]) {
+	border: 1px solid #999;
+	padding: 0 .5em;
+	background-color: #fff;
+	line-height: 2em;
+	font-size: 14px;
+	border-radius: .25em;
+}
+
+.i-block {
+	display: inline-block;
+}
+
+.scroll-top {
+	position: fixed;
+	left: auto;
+	right: 1em;
+	display: none;
+	bottom: .75em;
+	border: 1px solid #999;
+	padding: 0;
+	overflow: hidden;
+	width: 1.5em;
+	height: 1.5em;
+	background-color: #cccccc;
+	text-align: center;
+	line-height: 1.5em;
+	font-weight: bold;
+	font-size: 1.5em;
+	border-radius: 1em;
+	cursor: pointer;
+	opacity: .5;
+}
+
+.scroll-top:hover {
+	opacity: 1;
+}
+
+.scroll-top.show {
+	display: block;
+}
+
+th.active .arrow {
+	opacity: 1;
+}
+
+a.btn {
+	display: inline-block;
+	border: 1px solid transparent;
+	padding: 0 .25em;
+	border-radius: .25em;
+}
+
+a.btn:hover,
+a.btn.active,
+.imperial a.imperial,
+.metric a.metric {
+	border-color: #333;
+	background-color: #666;
+	color: #fefefe;
+	cursor: pointer;
+}
+
+.arrow {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 1em;
+	height: 1em;
+}
+
+.arrow::after {
+	content: '';
+	position: absolute;
+	left: .5em;
+	top: .505em;
+	margin: -.285em 0 0 -.285em;
+	border: solid transparent;
+	border-width: 0 .3em .5em;
+	border-bottom-color: #222;
+	width: .5em;
+	height: .5em;
+	line-height: .9em;
+	opacity: 0;
+}
+
+.arrow.asc::after {
+	transform: rotate(180deg);
+}
+
+.active .arrow::after {
+	opacity: 1;
+}
+
+.modal-mask {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	display: none;
+	background-color: rgba(0, 0, 0, .3);
+}
+
+.modal-window {
+	position: fixed;
+	left: 50%;
+	top: 10%;
+	bottom: 10%;
+	display: none;
+	border: 1px solid #ccc;
+	width: 80%;
+	max-width: 500px;
+	overflow: hidden;
+	background-color: #fff;
+	border-radius: 2em;
+	transform: translate(-50%, 0);
+}
+
+.modal-window > * {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	padding: 1.5em;
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+.modal-window h2 {
+	padding-right: 1.5em;
+}
+
+#modal-close {
+	position: absolute;
+	left: auto;
+	right: 1em;
+	top: .75em;
+	padding: 0;
+	overflow: hidden;
+	width: 1.5em;
+	height: 1.5em;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 1.5em;
+	font-weight: bold;
+	font-size: 1.5em;
+	border-radius: 1em;
+	cursor: pointer;
+}
+
+body.modal-open {
+	overflow: hidden;
+}
+
+body.modal-open .modal-mask,
+body.modal-open .modal-window {
+	display: block;
+}
+
+body.modal-open .scroll-top {
+	display: none;
+}
+
+#recipe-book {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+
+#recipe-book form {
+	text-align: center;
+}
+
+#recipe-book thead > * {
+	user-select: none;
+}
+
+#recipe-book tbody td {
+	border-top: 1px solid #ccc;
+	vertical-align: top;
+}
+
+#recipe-book tbody tr td:nth-child(2n) {
+	white-space: nowrap;
+}
+
+#recipe-book tbody tr:hover td {
+	background-color: #ccc;
+	cursor: pointer;
+}
+
+#recipe-card .units {
+	float: right;
+}
+
+#recipe-card h3 {
+	font-size: 1.2rem;
+	color: #444;
+}
+
+#recipe-card h4 {
+	font-size: 1rem;
+	color: #666;
+}
+
+#recipe-card ol {
+	counter-reset: ingredient-counter;
+}
+
+#recipe-card ol li {
+	position: relative;
+	margin-left: 0;
+	padding-left: 3em;
+	list-style-type: none;
+}
+
+#recipe-card ol li:before {
+	content: '' counter(ingredient-counter) ' }';
+	counter-increment: ingredient-counter;
+	position: absolute;
+	left: 0;
+	display: inline-block;
+	width: 2.5em;
+	text-align: right;
+	font-weight: bold;
+	color: #555;
+}
+
+#recipe-card strong {
+	color: #444;
+}
+
+.details span.imperial,
+.details span.metric {
+	display: none;
+}
+
+.details.imperial span.imperial,
+.details.metric span.metric {
+	display: inline-block;
+}
