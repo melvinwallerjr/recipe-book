@@ -1,9 +1,8 @@
-var recipeCard;
-
 (function(vWin) {
 	'use strict';
 	var vDoc = vWin.document,
-		vScrollTop = vDoc.querySelector('.scroll-top');
+		vScrollTop = vDoc.querySelector('.scroll-top'),
+		recipeCard;
 
 	function ajaxGet(url, callback) { // ajax load resource
 		var xmlHttp = new XMLHttpRequest(), data;
