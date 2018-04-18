@@ -46,12 +46,12 @@ readDirectory('/recipe-book/build/recipe-list');
 </footer>
 
 <div class="modal-mask"></div>
-<div id="recipe-card" class="modal-window">
+<dialog id="recipe-card" class="modal-window">
 	<recipe-card
 		:data="cardData"
 	></recipe-card>
 	<div id="modal-close">X</div>
-</div>
+</dialog>
 
 <div class="scroll-top" title="Scroll to Page Top">^</div>
 

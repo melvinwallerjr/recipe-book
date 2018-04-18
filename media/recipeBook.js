@@ -1,6 +1,8 @@
 (function(vWin) {
 	'use strict';
 	var vDoc = vWin.document,
+        vBody = vDoc.querySelector('body'),
+        vDialog = vDoc.getElementById('recipe-card'),
 		vScrollTop = vDoc.querySelector('.scroll-top'),
 		recipeCard;
 
@@ -59,12 +61,16 @@
 	vDoc.addEventListener('DOMContentLoaded', function() { // document ready
 		vDoc.querySelector('.modal-mask').addEventListener('click', function(event) { // hide modal, mask
 			event.stopPropagation();
-			vDoc.querySelector('body').classList.remove('modal-open');
+			vBody.classList.remove('modal-open');
+            attribute(vDialog, 'open', false);
+            vDialog.close();
 		});
 
 		vDoc.getElementById('modal-close').addEventListener('click', function(event) { // hide modal, button
 			event.stopPropagation();
-			vDoc.querySelector('body').classList.remove('modal-open');
+			vBody.classList.remove('modal-open');
+            attribute(vDialog, 'open', false);
+			vDialog.close();
 		});
 
 		vDoc.querySelector('.scroll-top').addEventListener('click', function() { // scroll to top
@@ -152,7 +158,9 @@
 			},
 			loadModal: function(idx) {
 				if (recipeCard.cardData.index && recipeCard.cardData.index === idx) { // current equals last
-					vDoc.querySelector('body').classList.add('modal-open'); // reopen same card
+					vBody.classList.add('modal-open'); // reopen same card
+                    attribute(vDialog, 'open', true);
+                    vDialog.show();
 				}
 				recipeCard.cardData = this.data[idx];
 			}
@@ -202,7 +210,9 @@
 		},
 		methods: {
 			showModal: function() {
-				vDoc.querySelector('body').classList.add('modal-open'); // open new card
+				vBody.classList.add('modal-open'); // open new card
+                attribute(vDialog, 'open', true);
+                vDialog.show();
 				vDoc.querySelector('.modal-window > *').scrollTop = 0; // scroll to top
 			},
 			setUnits: function(units) {
